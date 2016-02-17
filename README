@@ -1,0 +1,8 @@
+# to test, simply run
+$ gir-test.sh
+# optionally with the name of one of the tests in gir-tests/
+$ git-test.sh shapr
+
+# to run:
+# Make a pipe like gir.freenode.pipe then run the following
+$ nc -vv chat.freenode.net 6667 < gir.freenode.pipe| mawk -W interactive -f ../funcs.awk -f gir.awk -f ../irc-client.awk -v channel=\#mycoolchannel -v mynick=Gir -v debuglevel=1 > gir.freenode.pipe
